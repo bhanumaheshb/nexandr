@@ -2,12 +2,13 @@
   "name": "nexandr-website",
   "version": "1.0.0",
   "private": true,
-  "description": "NEXANDR corporate website — static pages served by Express, with a Claude-powered chat assistant.",
+  "description": "NEXANDR corporate website \u2014 static pages served by Express, with a Claude-powered chat assistant.",
   "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "build": "echo \"No build step \u2014 static pages are served from public/\""
   },
   "engines": {
     "node": ">=20"
