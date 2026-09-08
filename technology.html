@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technology — NEXANDR</title>
+  <meta name="description" content="The NEXANDR technology ecosystem: Python, PyTorch, Hugging Face, LLMs, RAG and agents over FastAPI, Django, PostgreSQL, React, Next.js, TypeScript, Docker and cloud infrastructure.">
+  <link rel="canonical" href="https://nexandr.com/technology.html">
+  <meta name="theme-color" content="#0B2E22">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXANDR">
+  <meta property="og:title" content="Technology — NEXANDR">
+  <meta property="og:description" content="The NEXANDR technology ecosystem: Python, PyTorch, Hugging Face, LLMs, RAG and agents over FastAPI, Django, PostgreSQL, React, Next.js, TypeScript, Docker and cloud infrastructure.">
+  <meta property="og:url" content="https://nexandr.com/technology.html">
+  <meta property="og:image" content="https://nexandr.com/assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/nexandr.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+</head>
+<body data-page="technology" class="bg-cream font-sans antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-nx="navbar"></div>
+  <main id="main">
+
+    <section class="relative overflow-hidden pt-[112px] sm:pt-[136px]">
+      <div class="grid-field mask-fade-b pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-28 -top-20 h-[460px] w-[460px] rounded-full bg-emerald/[0.09] blur-[130px] animate-float-slow" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 pb-16 sm:px-8 sm:pb-20">
+        <p class="reveal eyebrow text-emerald">Technology</p>
+        <h1 class="reveal display mt-5 max-w-4xl text-[clamp(2.4rem,6.4vw,4.4rem)] text-ink" style="--d:70ms">The stack behind<br>everything we ship.</h1>
+        <p class="reveal measure mt-7 text-[16.5px] leading-relaxed text-ink/65" style="--d:140ms">We choose technology the way we design systems: proven components in the load-bearing positions, deliberate novelty where it creates advantage, and clear contracts between every layer.</p>
+        
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-forest-deep">
+      <div class="grid-field-dark pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-32 top-1/3 h-[420px] w-[420px] rounded-full bg-emerald/20 blur-[130px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-28">
+        <div data-tech-header></div>
+
+        <!-- Architecture spine -->
+        <div class="reveal mt-14 overflow-x-auto">
+          <ol class="flex min-w-[680px] items-stretch gap-3" data-spine></ol>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2" data-tech-cards></div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-28">
+      <div data-principles-header></div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-principles></div>
+    </section>
+    <div data-nx="cta" data-cta='{"eyebrow": "Engineering", "title": "Want the architecture conversation?", "text": "We are happy to go deep on trade-offs \u2014 deployment model, data boundaries, evaluation, cost. Bring your architects.", "primary": {"label": "Talk to engineering", "href": "contact.html"}, "secondary": {"label": "See solutions", "href": "solutions.html"}}'></div>
+  </main>
+
+  <div data-nx="footer"></div>
+
+  <script src="assets/js/data/site.js"></script>
+  <script src="assets/js/data/technology.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const T = window.NEXANDR_TECHNOLOGY;
+
+      document.querySelector('[data-tech-header]').innerHTML = NX.sectionHeader({
+        eyebrow: 'Ecosystem',
+        title: 'Four layers, one system.',
+        text: 'Rather than a wall of logos, this is how the stack actually assembles — from runtime foundation to the intelligence and product surfaces above it.',
+        tone: 'dark',
+      });
+
+      document.querySelector('[data-spine]').innerHTML = T.layers.map((l, i) => `
+        <li class="flex flex-1 items-center gap-3">
+          <div class="flex-1 rounded-[12px] border border-cream/12 bg-cream/[0.03] px-5 py-4">
+            <p class="eyebrow text-lime/70">${NX.esc(l.role)}</p>
+            <p class="display mt-2 text-lg text-cream">${NX.esc(l.name)}</p>
+          </div>
+          ${i < T.layers.length - 1 ? `<span class="text-cream/25"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>` : ''}
+        </li>`).join('');
+
+      document.querySelector('[data-tech-cards]').innerHTML = T.layers.map(NX.techCard).join('');
+
+      document.querySelector('[data-principles-header]').innerHTML = NX.sectionHeader({
+        eyebrow: 'Principles',
+        title: 'How we make<br>technology decisions.',
+        text: 'These are the rules we apply before adding anything to the stack — for our own products and for client systems alike.',
+      });
+
+      document.querySelector('[data-principles]').innerHTML = T.principles.map((p, i) => `
+        <article class="reveal card card-hover card-accent p-7" style="--d:${i * 80}ms">
+          <span class="eyebrow text-ink/25">0${i + 1}</span>
+          <h3 class="display mt-5 text-[1.2rem] text-ink">${NX.esc(p.title)}</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-ink/60">${NX.esc(p.text)}</p>
+        </article>`).join('');
+    });
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

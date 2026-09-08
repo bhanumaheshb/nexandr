@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — NEXANDR</title>
+  <meta name="description" content="NEXANDR AI, Agents, Vision and Data — the platforms NEXANDR builds, owns and operates across intelligence, automation, perception and analytics.">
+  <link rel="canonical" href="https://nexandr.com/products.html">
+  <meta name="theme-color" content="#0B2E22">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXANDR">
+  <meta property="og:title" content="Products — NEXANDR">
+  <meta property="og:description" content="NEXANDR AI, Agents, Vision and Data — the platforms NEXANDR builds, owns and operates across intelligence, automation, perception and analytics.">
+  <meta property="og:url" content="https://nexandr.com/products.html">
+  <meta property="og:image" content="https://nexandr.com/assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/nexandr.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+</head>
+<body data-page="products" class="bg-cream font-sans antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-nx="navbar"></div>
+  <main id="main">
+
+    <section class="relative overflow-hidden pt-[112px] sm:pt-[136px]">
+      <div class="grid-field mask-fade-b pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-28 -top-20 h-[460px] w-[460px] rounded-full bg-emerald/[0.09] blur-[130px] animate-float-slow" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 pb-16 sm:px-8 sm:pb-20">
+        <p class="reveal eyebrow text-emerald">Products</p>
+        <h1 class="reveal display mt-5 max-w-4xl text-[clamp(2.4rem,6.4vw,4.4rem)] text-ink" style="--d:70ms">Technology we build,<br>own and operate.</h1>
+        <p class="reveal measure mt-7 text-[16.5px] leading-relaxed text-ink/65" style="--d:140ms">NEXANDR is a product company as much as an engineering partner. Our platforms share one foundation — intelligence, agents, perception and data — and each is built to be adopted, extended and depended on.</p>
+        <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row" style="--d:200ms">
+          <a href="#catalogue" class="btn btn-primary justify-center">Browse the platform
+            <svg class="btn-ico h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="contact.html" class="btn btn-ghost justify-center">Request a walkthrough</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogue" class="mx-auto max-w-content scroll-mt-28 px-5 py-16 sm:px-8 sm:py-20">
+      <div class="grid gap-5 sm:grid-cols-2" data-products></div>
+    </section>
+
+    <section class="rule bg-cream-light">
+      <div class="mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-28">
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <p class="reveal eyebrow text-emerald">One foundation</p>
+            <h2 class="reveal display mt-4 text-[clamp(1.9rem,4vw,3rem)] text-ink" style="--d:60ms">Separate products.<br>Shared architecture.</h2>
+            <p class="reveal measure mt-6 text-[15px] leading-relaxed text-ink/60" style="--d:120ms">
+              Every NEXANDR product sits on the same governed core — identity, data access, evaluation and
+              observability. Adopt one, and the next one is an extension rather than a migration.
+            </p>
+          </div>
+          <ul class="grid gap-4 sm:grid-cols-2 lg:col-span-7" data-foundation></ul>
+        </div>
+      </div>
+    </section>
+    <div data-nx="cta" data-cta='{"eyebrow": "Product enquiries", "title": "Want to see it working?", "text": "Product access is currently onboarding-led. Tell us about your environment and we will arrange a technical walkthrough.", "primary": {"label": "Request a walkthrough", "href": "contact.html"}, "secondary": {"label": "Engineering solutions", "href": "solutions.html"}}'></div>
+  </main>
+
+  <div data-nx="footer"></div>
+
+  <script src="assets/js/data/site.js"></script>
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('[data-products]').innerHTML =
+        window.NEXANDR_PRODUCTS.map(NX.productCard).join('');
+
+      const foundation = [
+        { t: 'Governed access', d: 'One identity, permission and audit model across every product.' },
+        { t: 'Shared data plane', d: 'Connect a source once; every product reads it under the same policy.' },
+        { t: 'Evaluation built in', d: 'Quality is measured on the release path, not discovered in production.' },
+        { t: 'Deploy where you need', d: 'Managed cloud, your cloud, or private infrastructure — same runtime.' },
+      ];
+      document.querySelector('[data-foundation]').innerHTML = foundation.map((f, i) => `
+        <li class="reveal card card-hover p-7" style="--d:${i * 70}ms">
+          <h3 class="display text-[1.15rem] text-ink">${NX.esc(f.t)}</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-ink/60">${NX.esc(f.d)}</p>
+        </li>`).join('');
+    });
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

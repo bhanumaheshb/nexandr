@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers — NEXANDR</title>
+  <meta name="description" content="Join NEXANDR and work on real-world AI, software, data and emerging technology projects. Now hiring an AI & Software Engineering Intern.">
+  <link rel="canonical" href="https://nexandr.com/careers.html">
+  <meta name="theme-color" content="#0B2E22">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXANDR">
+  <meta property="og:title" content="Careers — NEXANDR">
+  <meta property="og:description" content="Join NEXANDR and work on real-world AI, software, data and emerging technology projects. Now hiring an AI & Software Engineering Intern.">
+  <meta property="og:url" content="https://nexandr.com/careers.html">
+  <meta property="og:image" content="https://nexandr.com/assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/nexandr.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+</head>
+<body data-page="careers" class="bg-cream font-sans antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-nx="navbar"></div>
+  <main id="main">
+
+    <section class="relative overflow-hidden pt-[112px] sm:pt-[136px]">
+      <div class="grid-field mask-fade-b pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-28 -top-20 h-[460px] w-[460px] rounded-full bg-emerald/[0.09] blur-[130px] animate-float-slow" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 pb-16 sm:px-8 sm:pb-20">
+        <p class="reveal eyebrow text-emerald">Careers</p>
+        <h1 class="reveal display mt-5 max-w-4xl text-[clamp(2.4rem,6.4vw,4.4rem)] text-ink" style="--d:70ms">Build What’s Next.</h1>
+        <p class="reveal measure mt-7 text-[16.5px] leading-relaxed text-ink/65" style="--d:140ms">Join NEXANDR and work on real-world AI, software, data and emerging technology projects — shipping systems that go into production, not exercises that stop at a demo.</p>
+        <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row" style="--d:200ms">
+          <a href="#roles" class="btn btn-primary justify-center">View Open Roles
+            <svg class="btn-ico h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="mailto:careers@nexandr.com" class="btn btn-ghost justify-center">careers@nexandr.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-content px-5 py-16 sm:px-8 sm:py-20">
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-why></div>
+    </section>
+
+    <section id="roles" class="rule scroll-mt-28 bg-cream-light">
+      <div class="mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-28">
+        <div data-roles-header></div>
+        <div class="mt-12" data-roles></div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-28">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <p class="reveal eyebrow text-emerald">Hiring process</p>
+          <h2 class="reveal display mt-4 text-[clamp(1.9rem,4vw,3rem)] text-ink" style="--d:60ms">Four steps.<br>No trick questions.</h2>
+          <p class="reveal measure mt-6 text-[15px] leading-relaxed text-ink/60" style="--d:120ms">
+            We are interested in how you think about a real problem — so the process looks like the work.
+          </p>
+        </div>
+        <ol class="lg:col-span-7" data-process></ol>
+      </div>
+    </section>
+    <div data-nx="cta" data-cta='{"eyebrow": "Applications", "title": "Not seeing your role?", "text": "If you build serious things and want to work on AI, data or robotics systems that reach production, write to us anyway. Include something you have built.", "primary": {"label": "Email careers@nexandr.com", "href": "mailto:careers@nexandr.com"}, "secondary": {"label": "About NEXANDR", "href": "about.html"}}'></div>
+  </main>
+
+  <div data-nx="footer"></div>
+
+  <script src="assets/js/data/site.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const why = [
+        { t: 'Real systems', d: 'You will work on software that goes into production and is depended on.' },
+        { t: 'Range', d: 'AI, backend, frontend, data and infrastructure — not one narrow lane.' },
+        { t: 'Reviewed work', d: 'Every change is read by someone senior. That is how you get faster.' },
+        { t: 'Ownership early', d: 'Scope grows with what you can carry, not with time served.' },
+      ];
+      document.querySelector('[data-why]').innerHTML = why.map((w, i) => `
+        <article class="reveal card card-hover card-accent p-7" style="--d:${i * 70}ms">
+          <span class="eyebrow text-ink/25">0${i + 1}</span>
+          <h2 class="display mt-5 text-[1.2rem] text-ink">${NX.esc(w.t)}</h2>
+          <p class="mt-3 text-[14px] leading-relaxed text-ink/60">${NX.esc(w.d)}</p>
+        </article>`).join('');
+
+      document.querySelector('[data-roles-header]').innerHTML = NX.sectionHeader({
+        eyebrow: 'Open roles',
+        title: 'Current openings.',
+        text: 'We hire deliberately and in small numbers. Everything currently open is listed below.',
+      });
+
+      const roles = [{
+        title: 'AI & Software Engineering Intern',
+        type: 'Internship',
+        location: 'Remote / Hybrid',
+        team: 'Engineering',
+        summary: 'Work alongside our engineers on applied AI and full-stack product work — building, evaluating and shipping features that reach real users.',
+        skills: ['Generative AI', 'Machine Learning', 'Python', 'Backend', 'Frontend', 'Full-Stack', 'AI Agents', 'RAG', 'Cloud'],
+        doing: [
+          'Build and evaluate LLM and RAG features against real datasets.',
+          'Ship backend services and product interfaces alongside senior engineers.',
+          'Instrument what you build so its behaviour is measurable in production.',
+          'Take a scoped problem end to end, with review at every step.',
+        ],
+        looking: [
+          'Strong Python fundamentals and real curiosity about how systems fail.',
+          'Something you have built that you can walk us through in detail.',
+          'Comfort reading unfamiliar code and asking precise questions.',
+          'Interest in AI as an engineering discipline, not only as an API call.',
+        ],
+      }];
+
+      document.querySelector('[data-roles]').innerHTML = roles.map(r => `
+        <article class="reveal card overflow-hidden">
+          <div class="border-b border-line p-8 sm:p-10">
+            <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h3 class="display text-[clamp(1.5rem,3vw,2.1rem)] text-ink">${NX.esc(r.title)}</h3>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="chip">${NX.esc(r.type)}</span>
+                  <span class="chip">${NX.esc(r.location)}</span>
+                  <span class="chip">${NX.esc(r.team)}</span>
+                </div>
+              </div>
+              <a href="mailto:careers@nexandr.com?subject=${encodeURIComponent('Application — ' + r.title)}" class="btn btn-primary shrink-0 justify-center">
+                Apply now
+                <svg class="btn-ico h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+            <p class="measure mt-6 text-[15px] leading-relaxed text-ink/65">${NX.esc(r.summary)}</p>
+            <ul class="mt-7 flex flex-wrap gap-2">
+              ${r.skills.map(s => `<li class="rounded-md border border-emerald/25 bg-emerald/[0.06] px-2.5 py-1 font-mono text-[11.5px] text-emerald">${NX.esc(s)}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="grid gap-8 p-8 sm:grid-cols-2 sm:p-10">
+            <div>
+              <h4 class="eyebrow text-emerald">What you will do</h4>
+              <ul class="mt-5 space-y-3">
+                ${r.doing.map(d => `<li class="flex gap-3 text-[14px] leading-relaxed text-ink/65"><span class="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-emerald"></span>${NX.esc(d)}</li>`).join('')}
+              </ul>
+            </div>
+            <div>
+              <h4 class="eyebrow text-emerald">What we look for</h4>
+              <ul class="mt-5 space-y-3">
+                ${r.looking.map(d => `<li class="flex gap-3 text-[14px] leading-relaxed text-ink/65"><span class="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-emerald"></span>${NX.esc(d)}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        </article>`).join('');
+
+      const process = [
+        { t: 'Application', d: 'Send your CV and anything you have built to careers@nexandr.com.' },
+        { t: 'Intro conversation', d: 'A short call about your background and what you want to work on.' },
+        { t: 'Technical discussion', d: 'We walk through a real problem together — no whiteboard puzzles.' },
+        { t: 'Offer', d: 'Scope, mentorship and expectations agreed in writing before you start.' },
+      ];
+      document.querySelector('[data-process]').innerHTML = process.map((p, i) => `
+        <li class="reveal flex gap-6 border-t border-line py-7 first:border-t-0 first:pt-0" style="--d:${i * 70}ms">
+          <span class="eyebrow shrink-0 pt-1 text-ink/25">0${i + 1}</span>
+          <div>
+            <h3 class="display text-[1.25rem] text-ink">${NX.esc(p.t)}</h3>
+            <p class="mt-2 text-[14.5px] leading-relaxed text-ink/60">${NX.esc(p.d)}</p>
+          </div>
+        </li>`).join('');
+    });
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

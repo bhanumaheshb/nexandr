@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solutions — NEXANDR</title>
+  <meta name="description" content="AI & Machine Learning, software engineering, data platforms, cloud infrastructure and robotics — engineering solutions delivered to production by NEXANDR.">
+  <link rel="canonical" href="https://nexandr.com/solutions.html">
+  <meta name="theme-color" content="#0B2E22">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXANDR">
+  <meta property="og:title" content="Solutions — NEXANDR">
+  <meta property="og:description" content="AI & Machine Learning, software engineering, data platforms, cloud infrastructure and robotics — engineering solutions delivered to production by NEXANDR.">
+  <meta property="og:url" content="https://nexandr.com/solutions.html">
+  <meta property="og:image" content="https://nexandr.com/assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/nexandr.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+</head>
+<body data-page="solutions" class="bg-cream font-sans antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-nx="navbar"></div>
+  <main id="main">
+
+    <section class="relative overflow-hidden pt-[112px] sm:pt-[136px]">
+      <div class="grid-field mask-fade-b pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-28 -top-20 h-[460px] w-[460px] rounded-full bg-emerald/[0.09] blur-[130px] animate-float-slow" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 pb-16 sm:px-8 sm:pb-20">
+        <p class="reveal eyebrow text-emerald">Solutions</p>
+        <h1 class="reveal display mt-5 max-w-4xl text-[clamp(2.4rem,6.4vw,4.4rem)] text-ink" style="--d:70ms">Engineering partner<br>for hard technology.</h1>
+        <p class="reveal measure mt-7 text-[16.5px] leading-relaxed text-ink/65" style="--d:140ms">NEXANDR takes on the problems that sit between ambition and production — applied AI, platform engineering, data foundations, infrastructure and automation — and delivers systems your organisation can own and extend.</p>
+        <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row" style="--d:200ms">
+          <a href="contact.html" class="btn btn-primary justify-center">Start a conversation
+            <svg class="btn-ico h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="products.html" class="btn btn-ghost justify-center">See our products</a>
+        </div>
+        <nav class="reveal rule mt-14 flex flex-wrap gap-x-6 gap-y-3 pt-8" style="--d:260ms" aria-label="Solution categories" data-solution-nav></nav>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-content px-5 pb-8 sm:px-8" data-solutions></section>
+    <div data-nx="cta" data-cta='{"eyebrow": "Next step", "title": "Have a problem to solve?<br>Let\u2019s build it.", "text": "Bring us the constraint, not just the wish list. The most useful first conversation is a specific one.", "primary": {"label": "Let\u2019s Talk", "href": "contact.html"}, "secondary": {"label": "Our technology", "href": "technology.html"}}'></div>
+  </main>
+
+  <div data-nx="footer"></div>
+
+  <script src="assets/js/data/site.js"></script>
+  <script src="assets/js/data/solutions.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const SOL = window.NEXANDR_SOLUTIONS;
+
+      document.querySelector('[data-solution-nav]').innerHTML = SOL.map(s =>
+        `<a href="#${s.id}" class="group inline-flex items-baseline gap-2 text-sm text-ink/55 transition-colors hover:text-ink">
+           <span class="eyebrow text-ink/25">${s.index}</span>${NX.esc(s.name)}</a>`).join('');
+
+      document.querySelector('[data-solutions]').innerHTML = SOL.map((s, i) => `
+        <article id="${s.id}" class="rule scroll-mt-28 py-16 sm:py-20">
+          <div class="grid gap-10 lg:grid-cols-12 lg:gap-12">
+
+            <div class="lg:col-span-4">
+              <div class="lg:sticky lg:top-28">
+                <div class="reveal flex items-center gap-4">
+                  <span class="inline-flex h-12 w-12 items-center justify-center rounded-[10px] border border-line bg-cream-light text-emerald">
+                    ${NX.icon(s.icon, 'w-[22px] h-[22px]')}
+                  </span>
+                  <span class="eyebrow text-ink/25">${s.index}</span>
+                </div>
+                <h2 class="reveal display mt-6 text-[clamp(1.8rem,3.4vw,2.5rem)] text-ink" style="--d:60ms">${NX.esc(s.name)}</h2>
+                <p class="reveal mt-4 text-[15px] leading-relaxed text-ink/60" style="--d:100ms">${NX.esc(s.lead)}</p>
+                <ul class="reveal mt-7 flex flex-wrap gap-2" style="--d:140ms">
+                  ${s.capabilities.map(c => `<li class="chip">${NX.esc(c)}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2 lg:col-span-8">
+              <div class="reveal card p-7" style="--d:60ms">
+                <h3 class="eyebrow text-emerald">Problem</h3>
+                <p class="mt-4 text-[14.5px] leading-relaxed text-ink/65">${NX.esc(s.problem)}</p>
+              </div>
+              <div class="reveal card p-7" style="--d:110ms">
+                <h3 class="eyebrow text-emerald">What we build</h3>
+                <p class="mt-4 text-[14.5px] leading-relaxed text-ink/65">${NX.esc(s.build)}</p>
+              </div>
+              <div class="reveal card p-7" style="--d:160ms">
+                <h3 class="eyebrow text-emerald">Technology</h3>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                  ${s.technology.map(t => `<li class="rounded-md border border-line bg-cream px-2.5 py-1 font-mono text-[11.5px] text-ink/60">${NX.esc(t)}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="reveal card bg-forest p-7 text-cream" style="--d:210ms">
+                <h3 class="eyebrow text-lime/80">Business impact</h3>
+                <ul class="mt-4 space-y-2.5">
+                  ${s.impact.map(x => `<li class="flex gap-3 text-[14px] leading-relaxed text-cream/70"><span class="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-lime"></span>${NX.esc(x)}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </article>`).join('');
+    });
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

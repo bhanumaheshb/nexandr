@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06180F"/>
+      <stop offset="100%" stop-color="#0B2E22"/>
+    </linearGradient>
+    <linearGradient id="x" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C4F04A"/><stop offset="100%" stop-color="#0F7A56"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#16A473" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#16A473" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#C4F04A" stroke-opacity="0.07">
+    <path d="M0 90h1200M0 210h1200M0 330h1200M0 450h1200M0 570h1200"/>
+    <path d="M120 0v630M320 0v630M520 0v630M720 0v630M920 0v630M1120 0v630"/>
+  </g>
+  <g transform="translate(100 250) scale(1.35)">
+    <g fill="none" stroke="#F5F2E9" stroke-width="8" stroke-linejoin="miter">
+      <path d="M10 86V10l62 76V10"/>
+      <path d="M106 10h52M106 48h44M106 86h52"/>
+      <path d="M288 86l31-76 31 76"/>
+      <path d="M384 86V10l62 76V10"/>
+      <path d="M480 86V10h26q32 0 32 38t-32 38z"/>
+      <path d="M572 86V10h32q26 0 26 22t-26 22h-32m32 0l26 32"/>
+    </g>
+    <path d="M192 10l62 76M254 10l-62 76" stroke="url(#x)" stroke-width="9" fill="none"/>
+    <rect x="106" y="4" width="26" height="8" fill="#7ED321"/>
+  </g>
+  <text x="100" y="450" fill="#F5F2E9" fill-opacity="0.72" font-family="Inter, Helvetica, sans-serif" font-size="34" letter-spacing="1">Building What’s Next.</text>
+  <text x="100" y="500" fill="#C4F04A" fill-opacity="0.85" font-family="Inter, Helvetica, sans-serif" font-size="21" letter-spacing="3">AI · NETWORKS · DATA · ROBOTICS</text>
+</svg>
